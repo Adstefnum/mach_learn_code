@@ -10,30 +10,30 @@ from xgboost import XGBClassifier
 from sklearn.metrics import accuracy_score
 import numpy as np
 
-df = pd.read_csv("datasets_33180_43520_heart.csv")
+
+df = pd.read_csv('iris.data.csv')
 
 #Developing data for model
-x = df.drop("target",axis=1)
-y = df['target']
+x = df.drop("variety",axis=1)
+y = df['variety']
 
-#splitting the data
 x_train,x_test,y_train,y_test = train_test_split(x,y,test_size=0.2, random_state = 42)
 
-#scaling the data
 scale = StandardScaler()
 x_train = scale.fit_transform(x_train)
 x_test = scale.transform(x_test)
 
+
 #
 score = {}
 
+#all are 100 except this
 clf_1 = LogisticRegression(solver = 'lbfgs', multi_class = 'ovr', random_state = 0)
 clf_1.fit(x_train,y_train)
 pred1=clf_1.predict(x_test)
 s1=accuracy_score(y_test,pred1)
 score['logisticreg'] = s1*100
 
-#best
 clf_1 = KNeighborsClassifier()
 clf_1.fit(x_train,y_train)
 pred1=clf_1.predict(x_test)
@@ -67,3 +67,4 @@ print(score)
 
 #implement neural networks
 
+ 
