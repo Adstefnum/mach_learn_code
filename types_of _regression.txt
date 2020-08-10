@@ -1,0 +1,19 @@
+Types of regression:
+	Linear Regression:
+		Simple
+		Multi
+	Polynomial Regression
+	Logistic Regression
+	Quantile Regression
+	Ridge Regression
+	Lasso Regression
+	Elastic Net Regression
+	Principal Components Regression (PCR)
+	Partial Least Squares (PLS) Regression
+	Support Vector Regression
+	Ordinal Regression
+	Poisson Regression
+	Negative Binomial Regression
+	Quasi Poisson Regression
+	Cox Regression
+	Tobit Regression
