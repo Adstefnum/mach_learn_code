@@ -66,4 +66,7 @@ score['svm'] = s1*100
 print(score)
 
 #implement neural networks
+#start pickling
+#it seems that even though accuracy can be high it sill gives wrong answers when you feed it 
+#your own data
 
